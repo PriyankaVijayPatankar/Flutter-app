@@ -31,64 +31,72 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green,
         ),
         body: Builder(
-          builder: (context) => Center(
-            child: Column(
-              children: [
-                Image.network(
-                  'https://i1.wp.com/famt.ac.in/wp-content/uploads/2015/08/DSC_0050.jpg',
-                  height: 100,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(
-                    '\n\nRecent advancements in the areas of computers, software, networks, internet, communication technology, Big Data, and cloud computing, etc. have made a huge amount of information available to us. In this high-tech era, information is something without which industry, individuals cannot survive, and their success depends on the ability to acquire accurate and timely information. Keeping this in mind FAMT started the Bachelor of Engineering program in Information Technology (IT) from academic session 2001-2002. The emphasis of B.E. in Information Technology curriculum is on Computer Science, Software Development, Networking, Communication, Web Engineering, Security, Multimedia processing, IoT, Cloud Computing, Data Analytics, and Soft Computing. Currently, the department’s infrastructure contains three classrooms, six laboratories, a staff room, and a seminar hall. Ole classroom is ICT enabled with a Wi-Fi projection facility. All floors of the IT department have Wi-Fi connectivity.\n\nThe computing facility in the department includes 155 computers with the latest configuration, and other ICT equipment such as LCD projectors, printers and scanners, and UPS backup. Dr. Vinayak A Bharadi and Prof. Santosh V Jadhav got an NVIDIA GPU Research Grant of Rs. 1.5 Lacs in the form of Titan X Pascal GPU (Graphics Processing Unit) to support research. The Information Technology department also has academic collaboration with NVIDIA for three subjects namely Soft Computing, Big Data Analytics, and Robotics. They will provide course material and hardware support for the conduction of these courses as well as bridge courses under the NVIDIA Developer Center. It Department has conducted Bridge courses in Mobile Cloud Computing, MongoDB Connectivity, Online Payments for E-Biz to make students industry-ready. Besides this IT Department has done a tie-up with Microsoft for conducting Training and Certification under Microsoft Virtual Academy (MVA) for students as well as staff in the domain of IoT and Cyber Security. Department has MoU with Amazon AWS to setup Amazon AWS Academy for the professional training and Certification of the staff and the students, AWS will be giving 50% discount for all the certification and free training for the faculty member under this MoU.\n\nStudents undergo on-field projects so that they can be prepared to face professional challenges. Faculty members and students have published more than 500 papers are in national and international conferences and UGC Approved Journals. Research areas of published works are Cloud Computing, Ubiquitous Computing, Pervasive Computing, Soft computing, etc. Besides this, students are given in house training of GATE examination, aptitude, and other competitive examinations. To make students eligible for international placements and skills required in the MNCs IT Department has signed MoU with Apple Inc. to sept up Apple iOS Developer University Program (iDUP), Apple has provided the Programming platform and training under the same. The department has also set up an Intel Intelligent Systems lab in collaboration with Intel Inc. This lab has hardware and software setup to carry out application development for Smart City Projects, in the domain of the Internet of Things. \n\n',
-                    style: TextStyle(fontSize: 15),
-                    textAlign: TextAlign.justify,
+          builder: (context) => SingleChildScrollView(
+            child: Center(
+              child: Column(
+                children: [
+                  Image.network(
+                    'https://i1.wp.com/famt.ac.in/wp-content/uploads/2015/08/DSC_0050.jpg',
+                    height: 300,
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    RaisedButton(
-                      child: Text('Intel Centre of Excellence Lab'),
-                      color: Colors.lightBlueAccent,
-                      onPressed: () => iceLab(context),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      '\n\nRecent advancements in the areas of computers, software, networks, internet, communication technology, Big Data, and cloud computing, etc. have made a huge amount of information available to us. In this high-tech era, information is something without which industry, individuals cannot survive, and their success depends on the ability to acquire accurate and timely information. Keeping this in mind FAMT started the Bachelor of Engineering program in Information Technology (IT) from academic session 2001-2002. The emphasis of B.E. in Information Technology curriculum is on Computer Science, Software Development, Networking, Communication, Web Engineering, Security, Multimedia processing, IoT, Cloud Computing, Data Analytics, and Soft Computing. Currently, the department’s infrastructure contains three classrooms, six laboratories, a staff room, and a seminar hall. Ole classroom is ICT enabled with a Wi-Fi projection facility. All floors of the IT department have Wi-Fi connectivity.\n\nThe computing facility in the department includes 155 computers with the latest configuration, and other ICT equipment such as LCD projectors, printers and scanners, and UPS backup. Dr. Vinayak A Bharadi and Prof. Santosh V Jadhav got an NVIDIA GPU Research Grant of Rs. 1.5 Lacs in the form of Titan X Pascal GPU (Graphics Processing Unit) to support research. The Information Technology department also has academic collaboration with NVIDIA for three subjects namely Soft Computing, Big Data Analytics, and Robotics. They will provide course material and hardware support for the conduction of these courses as well as bridge courses under the NVIDIA Developer Center. It Department has conducted Bridge courses in Mobile Cloud Computing, MongoDB Connectivity, Online Payments for E-Biz to make students industry-ready. Besides this IT Department has done a tie-up with Microsoft for conducting Training and Certification under Microsoft Virtual Academy (MVA) for students as well as staff in the domain of IoT and Cyber Security. Department has MoU with Amazon AWS to setup Amazon AWS Academy for the professional training and Certification of the staff and the students, AWS will be giving 50% discount for all the certification and free training for the faculty member under this MoU.\n\nStudents undergo on-field projects so that they can be prepared to face professional challenges. Faculty members and students have published more than 500 papers are in national and international conferences and UGC Approved Journals. Research areas of published works are Cloud Computing, Ubiquitous Computing, Pervasive Computing, Soft computing, etc. Besides this, students are given in house training of GATE examination, aptitude, and other competitive examinations. To make students eligible for international placements and skills required in the MNCs IT Department has signed MoU with Apple Inc. to sept up Apple iOS Developer University Program (iDUP), Apple has provided the Programming platform and training under the same. The department has also set up an Intel Intelligent Systems lab in collaboration with Intel Inc. This lab has hardware and software setup to carry out application development for Smart City Projects, in the domain of the Internet of Things. \n\n',
+                      //maxLines: 15,
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                      style: TextStyle(fontSize: 15),
+                      textAlign: TextAlign.justify,
                     ),
-                    RaisedButton(
-                      child: Text('Microsoft Virtual Academy Lab'),
-                      onPressed: () => mvaLab(context),
-                    ),
-                    RaisedButton(
-                      child: Text('Apple iOS Developer Centre Lab'),
-                      color: Colors.lightBlueAccent,
-                      onPressed: () => aidcLab(context),
-                    ),
-                    RaisedButton(
-                      child: Text('Amazon AWS Academy Lab'),
-                      onPressed: () => aaaLab(context),
-                    ),
-                    RaisedButton(
-                      child: Text('NVIDIA Developer Program Lab'),
-                      color: Colors.lightBlueAccent,
-                      onPressed: () => ndpLab(context),
-                    ),
-                    RaisedButton(
-                      child: Text('IBM Lab'),
-                      onPressed: () => ibmLab(context),
-                    ),
-                    RaisedButton(
-                      child:
-                          Text('Palo Alto Network Cybersecurity Academy Lab'),
-                      color: Colors.lightBlueAccent,
-                      onPressed: () => pancaLab(context),
-                    ),
-                  ],
-                ),
-                RaisedButton(
-                  child: Text('Contact Us'),
-                  onPressed: () => contactUs(context),
-                ),
-              ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      RaisedButton(
+                        child: Text('Intel Centre of Excellence Lab'),
+                        color: Colors.lightBlueAccent,
+                        onPressed: () => iceLab(context),
+                      ),
+                      RaisedButton(
+                        child: Text('Microsoft Virtual Academy Lab'),
+                        onPressed: () => mvaLab(context),
+                      ),
+                      RaisedButton(
+                        child: Text('Apple iOS Developer Centre Lab'),
+                        color: Colors.lightBlueAccent,
+                        onPressed: () => aidcLab(context),
+                      ),
+                      RaisedButton(
+                        child: Text('Amazon AWS Academy Lab'),
+                        onPressed: () => aaaLab(context),
+                      ),
+                      RaisedButton(
+                        child: Text('NVIDIA Developer Program Lab'),
+                        color: Colors.lightBlueAccent,
+                        onPressed: () => ndpLab(context),
+                      ),
+                      RaisedButton(
+                        child: Text('IBM Lab'),
+                        onPressed: () => ibmLab(context),
+                      ),
+                      RaisedButton(
+                        child:
+                            Text('Palo Alto Network Cybersecurity Academy Lab'),
+                        color: Colors.lightBlueAccent,
+                        onPressed: () => pancaLab(context),
+                      ),
+                    ],
+                  ),
+                  //Spacer(
+                  //  flex: 2,
+                  //),
+                  RaisedButton(
+                    child: Text('Contact Us'),
+                    onPressed: () => contactUs(context),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -267,3 +275,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
